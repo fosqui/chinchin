@@ -16,7 +16,7 @@ export default function Clientes() {
   return (
     <div>
       <Header />
-      <Image src='/fondopc.jpg' alt='servicios-img' width={375} height={100}/>
+      <Image src='/fondopc.jpg' alt='servicios-img' width={1920} height={512}/>
       <div className="titulo-clientes">
         <h1>Estos son algunos de <b>nuestros clientes.</b></h1>
       </div>

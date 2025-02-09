@@ -17,11 +17,11 @@ export default function Servicios() {
     <div>
       <Header />
       <div className="titulo-servicios">
-        <Image src='/servicios2.jpg' alt='servicios-img' width={375} height={100}/>
+        <Image src='/servicios2.jpg' alt='servicios-img' width={1920} height={512}/>
         <h1>Soluciones creativas para impulsar tu negocio.</h1>
       </div>
       <TracingBeamDemo />
-      <FloatingWhatsAppButton />
+
       <Footer />
     </div>
   );

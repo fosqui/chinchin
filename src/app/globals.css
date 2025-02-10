@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}*/
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -30,9 +20,9 @@ body {
   font-family: 'Montserrat';
   line-height: 1.6;
   color: #333;
-  scroll-behavior: smooth; /* Hacer que el desplazamiento sea suave */
+  scroll-behavior: smooth; 
   padding-top: 60px;
-  overflow-x: hidden; /* Evita desbordamiento horizontal */
+  overflow-x: hidden; 
 }
 
 /*Header*/
@@ -52,29 +42,21 @@ header {
   font-weight: 400;
   position:relative;
   height: 100%;
-  /*max-width: 100%;
-  max-height: 100%;
-  align-items: center;
-  width: 100%;*/
   justify-content: end;
 }
 .logo a{
   position: absolute;
-  /*aspect-ratio: 1/1;
-  width: 10%;*/
   display: flex;
-  left: 0; /* Alinea el logo a la izquierda */
+  left: 0; 
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-
 .logo img{
   position: relative !important;
   max-height: 40px;
   border-radius: 50px;
 }
-
 .title-container {
   display: flex;
   flex-direction: column;
@@ -135,10 +117,11 @@ nav ul{
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 nav ul li {
   display: inline;
-  margin-left: 20px;
+  margin: 0.5rem 0;
 }
 nav ul li button {
   color: #ffffff;
@@ -148,6 +131,26 @@ nav ul li button {
   font-size: 1rem;
   cursor: pointer;
 
+}
+/* Carrusel de imágenes */
+.carousel {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+.carousel-inner {
+  display: flex;
+  width: 100%; /* 100% por cada una de las 4 imágenes */
+  height: 100%;
+  transition: transform 2s ease-in-out;
+}
+.carousel-item {
+  flex: 1 0 100%;
+  height: 100%;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -346,6 +349,8 @@ nav ul li button {
 .redes-link:hover {
   color: #18CCFC; /* Cambia el color al pasar el ratón por encima */
 }
+
+
 /* Estilos para el botón de contacto y el menú desplegable */
 .contact-menu {
   position: relative;
@@ -391,44 +396,34 @@ nav ul li button {
   background-color: #e0e0e0;
 }
 
-/* Carrusel de imágenes */
-
-.carousel {
-  overflow: hidden;
-  padding-bottom: 50px;
-}
-.carousel-inner {
-  display: flex;
-  width: 100%; /* 100% por cada una de las 4 imágenes */
-  height: 100%;
-  transition: transform 2s ease-in-out;
-}
-.carousel-item {
-  flex: 1 0 100%;
-  height: 100%;
-}
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /*Secciones*/
-section {
-  position:relative;
-  overflow: hidden;
-  /*height: calc(100vh - 90px); /* Ajusta la altura para tener en cuenta el encabezado */
+.main-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 2rem; /* Padding-top igual a la altura del encabezado */
+  text-align: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  gap: 2.5rem;
+  position:relative;
+  overflow: hidden;
+  padding: 2rem 2rem;
+  padding-top: 0;
   font-weight: bolder;
+}
+.main-section p{
+  font-size: 1.125rem ;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  max-width: 42rem;
 }
 section .content {
   max-width: 1200px; 
   text-align: center;
 }
-
 .servicios{
   display: flex;
   position: relative;
@@ -594,12 +589,10 @@ section .content {
   padding: 0px;
   height: 20%;
 }
-*/
 
-/* Diseño de equipo */
 #sobre-nosotras h2{
-  font-size: 5rem; /* Aumenta el tamaño de los encabezados */
-  margin-bottom: 1.5rem; /* Añade más espacio debajo del encabezado */
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
   color : #fff;
   font-weight: bolder;
 }
@@ -621,7 +614,9 @@ section .content {
   border-radius: 50%;
   object-fit: cover;
 }
-/* Estilo general para el formulario */
+  */
+
+/* FORMULARIO */
 form {
   font-weight: bolder;
   display: flex;
@@ -658,20 +653,15 @@ form {
   max-width: 800px; /* Puedes ajustar el tamaño máximo según sea necesario */
   flex-direction: column;
 }
-/* Estilo para la columna izquierda (inputs de nombre, email y teléfono) */
 .form-left {
   display: flex;
   flex-direction: column;
 }
-
-/* Estilo para la columna derecha (mensaje y botón) */
 .form-right {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-
-/* Estilo común para todos los inputs y textarea */
 form input,
 form textarea {
   color: #fff;
@@ -683,7 +673,6 @@ form textarea {
   font-size: 16px;
   background-color: #333333;
 }
-
 input::placeholder, textarea::placeholder {
   color: #cccccc;
 }
@@ -693,7 +682,6 @@ form textarea{
   min-height: 50px;
   max-height: 300px;
 }
-
 /* Estilo para el botón de envío */
 form button {
   width: 40%;
@@ -727,12 +715,8 @@ form button:hover {
   align-items: center;
   width: 60%;
 }
- .pin {
-  font-weight: bolder;
-  width: 40%; 
- }
 
-/*Copyright*/
+/*FOOTER*/
 footer {
   background: #000000;
   color: #fff;
@@ -743,26 +727,6 @@ footer {
 
 /* Media Queries */
 
-  nav ul {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  nav ul li {
-      margin: 0.5rem 0;
-  }
-
-  section {
-      padding: 2rem 1rem;
-  }
-
-  #social-media h2, #branding h2, #meta-ads h2 {
-      font-size: 2rem; 
-  }
-
-  #social-media p, #branding p, #meta-ads p {
-      font-size: 1rem; 
-  }
 /* Estilo responsivo para pantallas más pequeñas */
 /*@media (max-width: 700px) {
   form {

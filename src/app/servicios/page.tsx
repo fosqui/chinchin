@@ -3,11 +3,7 @@ import { Inter } from "next/font/google";
 import Header from '../../components/Header';
 import TracingBeamDemo from '../../components/TracingBeamDemo';
 import Footer from '../../components/Footer';
-import Form from '../../components/Form'; 
-import ThreeDCardDemo from '../../components/ThreeDCardDemo';
-import AnimatedPinDemo from '../../components/AnimatedPinDemo'; 
-import MacbookScrollDemo from '../../components/MacbookScrollDemo';
-import FloatingWhatsAppButton from "../../components/FloatingWhatsAppButton";
+import Form from '../../components/Form';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +17,7 @@ export default function Servicios() {
         <h1>Soluciones creativas para impulsar tu negocio.</h1>
       </div>
       <TracingBeamDemo />
-
+      <Form />
       <Footer />
     </div>
   );

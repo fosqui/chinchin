@@ -404,8 +404,7 @@ nav ul li button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 255 255);
   gap: 2.5rem;
   position:relative;
   overflow: hidden;
@@ -433,9 +432,7 @@ section .content {
   text-align: center;
   padding: 10px 40px;
   padding-top: 2rem;
-  /*padding-bottom: 5rem /* 80px */;
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity)) /* #f9fafb */;
+  background-color: rgb(255 255 255);
 }
 .nuestros-servicios{
   position: absolute;
